@@ -4,7 +4,8 @@ const express = require('express'),
     path = require('path'),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 3000,
-    fs = require('fs');
+    fs = require('fs'),
+	upload = multer({ dest: 'uploads/' });
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
@@ -19,8 +20,10 @@ app.get('/writeJSON', (req, res) => {
     });
 });
 
-app.post('/postImage', (req, res) => {
-    console.log('inside post ', res.body);
+
+app.post('/postImage', upload.array(), function (req, res, next) {
+  // req.body contains the text fields
+  console.log('inside post ', req.body);
 });
 
 app.get('/getData', (req,res) => {
