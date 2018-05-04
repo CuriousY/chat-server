@@ -23,6 +23,10 @@ app.post('/postImage', (req, res) => {
     console.log('inside post ', res.body);
 });
 
+app.get('/getData', (req,res) => {
+	res.send({success:"true"});
+});
+
 const writeData = () => {
     return new Promise((resolve, reject) => {
         let filePath = './appdata/user.json';
