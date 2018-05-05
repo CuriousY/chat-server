@@ -6,12 +6,12 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 3000,
     fs = require('fs'),
-	upload = multer({ dest: 'uploads/' });
+	upload = multer({ dest: 'public/uploads/' });
 	type = upload.single('name');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
-
+app.use(express.static('public'));
 app.get('/writeJSON', (req, res) => {
     writeData().then((message) => {
         console.log('success ', message);
