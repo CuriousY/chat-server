@@ -6,11 +6,11 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 3000,
     fs = require('fs'),
-	upload = multer({ dest: 'uploads/' });
+	upload = multer({ dest: 'uploads/' });,
+	type = upload.single('filename');
 
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
-app.use(upload.array()); 
+app.use(bodyParser.json()); 
 
 app.get('/writeJSON', (req, res) => {
     writeData().then((message) => {
@@ -23,8 +23,9 @@ app.get('/writeJSON', (req, res) => {
 });
 
 
-app.post('/postImage', function (req, res) {
-  console.log('inside post ', req);
+app.post('/postImage', type, function (req, res) {
+	var tmp_path = req.file.path;
+  console.log('inside post ', tmp_path);
   res.send({success:'true'});
 });
 
