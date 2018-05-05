@@ -24,8 +24,7 @@ app.get('/writeJSON', (req, res) => {
 
 
 app.post('/postImage', function (req, res) {
-  // req.body contains the text fields
-  console.log('inside post ', req.body);
+  console.log('inside post ', req);
   res.send({success:'true'});
 });
 
