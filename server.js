@@ -7,7 +7,7 @@ const express = require('express'),
     port = process.env.PORT || 3000,
     fs = require('fs'),
 	upload = multer({ dest: 'uploads/' });
-	type = upload.single('filename');
+	type = upload.single('name');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json()); 
