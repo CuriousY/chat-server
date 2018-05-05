@@ -24,7 +24,7 @@ app.get('/writeJSON', (req, res) => {
 
 
 app.post('/postImage', type, function (req, res) {
-	var tmp_path = req.file.path;
+	var tmp_path = req.file;
   console.log('inside post ', tmp_path);
   res.send({success:'true'});
 });
