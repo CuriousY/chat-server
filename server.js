@@ -10,6 +10,7 @@ const express = require('express'),
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
+app.use(upload.array()); 
 
 app.get('/writeJSON', (req, res) => {
     writeData().then((message) => {
