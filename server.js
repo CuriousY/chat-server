@@ -1,6 +1,7 @@
 const express = require('express'),
     request = require('request'),
     app = express(),
+	multer=require('multer'),
     path = require('path'),
     bodyParser = require('body-parser'),
     port = process.env.PORT || 3000,
