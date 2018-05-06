@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/libs/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <title>Family Chat</title>
+</head>
+
+<body>
+    
+    <div class="heading">
+        <h1>Family Chat App </h1>
+    </div>
+    <div class="container-fluid chatFormHome">
+        <div class="form-group">
+            <input id="txtUserName" value="" class="form-control form-control-lg" style="width:80%;float:left" type="text" placeholder="Enter your name">
+            <button type="button" id="btnEnter" style="height:48px;float:right;width:19%" class="btn btn-primary btnEnter disabled">Enter</button>
+        </div>
+
+    </div>
+
+    <script>
+        $('#txtUserName').on('keypress', function () {
+            if ($(this).val().length > 0) {
+                $('#btnEnter').removeClass('disabled');
+            }
+
+        });
+        $('#btnEnter').on('click', function () {
+            if ($('#txtUserName').val().length > 0) {
+                console.log('true');
+                let username = $('#txtUserName').val();
+                $('#txtUserName').val('');
+                window.location.href = location.href + 'chat.html?' + username;
+            }
+            else {
+                $('#btnEnter').addClass('disabled');
+            }
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

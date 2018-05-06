@@ -1,0 +1,106 @@
+body {
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 0 20px;
+    background-color: #dccae8;
+}
+.heading{
+    text-align: center;
+    color:#6b026c;
+}
+
+.chatBox {
+    font-family: cursive;
+    color:#834e84
+}
+
+#chatBody {
+    background-color:#937fff91;
+    padding:10px;
+    margin-top:20px;
+    border-radius: 10px;
+    height:400px;
+    overflow-y: scroll;
+    overflow: auto;
+}
+
+.form-group {
+    margin-bottom:0;
+}
+
+.chatForm {
+    background-color:#937fff91;
+    padding:10px;
+    height:145px;
+    border-radius: 10px;
+}
+
+.chatFormHome{
+    background-color:#937fff91;
+    padding:10px;
+    height:75px;
+    margin-top:200px;
+    border-radius: 10px;
+}
+
+.container {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+.container img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.time-right {
+    float: right;
+    color: #aaa;
+}
+
+.time-left {
+    float: left;
+    color: #999;
+}
+
+.btnSubmit {
+    float: right;
+    margin-top:5px;
+}
+
+.user{
+    float:left;
+    width:100px;
+}
+
+.username {
+    font-size: 14px;
+    font-weight: bold;
+    color: #7c039a;
+}
+
+#feedback{
+    text-align:center;
+}

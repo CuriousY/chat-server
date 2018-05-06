@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/libs/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/libs/socket.io.js"></script>
+    <script src="js/libs/jquery-3.3.1.min.js"></script>
+    <title>Family Chat</title>
+</head>
+
+<body>
+    <div>
+        <a href="/">Go to Home</a>
+    </div>
+    <div class="heading">
+        <h1>Family Chat App </h1>
+    </div>
+
+    <div class="container-fluid" id="chatBody">
+    </div>
+    <div class="container-fluid typingmsg">
+        <h6 id="feedback"></h6>
+    </div>
+    <div class="container-fluid chatForm">
+        <div class="form-group">
+            <textarea class="form-control" id="message" placeholder="start typing here ..." id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="button" id="btnSend" class="btn btn-primary btnSubmit">Send</button>
+    </div>
+
+
+    <script src="js/project/chat.js"></script>
+</body>
+
+</html>
