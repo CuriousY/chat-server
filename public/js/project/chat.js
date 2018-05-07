@@ -1,4 +1,4 @@
-let socket = io.connect('http://192.168.1.208:3000/');
+let socket = io.connect('http://localhost:3000/');
 
 //chatBody
 //btnSend

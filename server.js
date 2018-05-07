@@ -64,6 +64,7 @@ app.get('/getUserDetails', (req, res) => {
             let isUserExists = usersObj.users[contact_number] ? true : false;
             if (isUserExists) {
                 responseData = usersObj.users[contact_number];
+                console.log('user ', responseData);
                 res.send({ user: responseData });
             }
         }
