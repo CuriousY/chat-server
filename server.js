@@ -46,7 +46,7 @@ app.get('/writeJSON', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-    res.send('default page');
+    res.send(__dirname +'index.html');
 });
 
 app.get('/getUserDetails', (req, res) => {
